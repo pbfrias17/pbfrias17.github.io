@@ -1,29 +1,50 @@
 var navTargets = [];
-var navCurr = 0;
+var navCurr = 1;
+var prevScrollY = window.scrollY;
+console.log(prevScrollY);
 
 $.each($('.navTarget'), function(i, el) {
-  navTargets.push({ obj: $(el), top: $(el).offset().top });
+  navTargets.push({
+    obj: $(el),
+    top: $(el).offset().top,
+    li: $('a[href="#'+$(el).attr('id')+'"]').parent()
+  });
 });
 
-navTargets[navCurr].obj.toggleClass('active');
-console.log(navTargets[navCurr].obj);
 
+navTargets[navCurr].li.addClass('active');
+console.log(navTargets[1]);
+
+// Represent active nav link based on current window position
 $(window).scroll(function() {
-  var navActive = navTargets[navCurr].obj,
-      navNext = navTargets[navCurr + 1].obj;
+  var navActive = navTargets[navCurr]
+  var navNext = '';
 
-  if(window.scrollY >= navActive.offset().top) {
-    console.log('still here1');
-    if(window.scrollY >= navNext.offset().top) {
-      navActive.toggleClass('active');
-      navNext.toggleClass('active');
+  if(window.scrollY >= prevScrollY) {
+    //Scrolling down
+    if(navCurr == navTargets.length - 1)
+      return;
+
+    navNext = navTargets[navCurr + 1];
+    if(window.scrollY >= navNext.top) {
+      navActive.li.removeClass('active');
+      navNext.li.addClass('active');
       navCurr++;
-    } else {
-      console.log('still here2');
     }
   } else {
-    console.log(window.scrollY + ' < ' + navActive.offset().top);
+    //Scrolling up
+    if(navCurr == 0)
+      return;
+
+    navNext = navTargets[navCurr - 1];
+    if(window.scrollY <= navActive.top) {
+      navActive.li.removeClass('active');
+      navNext.li.addClass('active');
+      navCurr--;
+    }
   }
+
+  prevScrollY = window.scrollY;
 });
 
 // Enable smooth, same-page navigation scrolling
