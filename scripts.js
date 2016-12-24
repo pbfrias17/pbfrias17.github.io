@@ -1,21 +1,29 @@
 var navTargets = [];
-var navCurr = 1;
+var navCurr = 0;
 var prevScrollY = window.scrollY;
 console.log(prevScrollY);
 
+// keep track of all navigation targets and initialize
 $.each($('.navTarget'), function(i, el) {
+  // #top is a special-case
+  var href = (i != 0) ? $(el).attr('id') : '';
+
   navTargets.push({
     obj: $(el),
     top: $(el).offset().top,
-    li: $('a[href="#'+$(el).attr('id')+'"]').parent()
+    li: $('a[href="#'+href+'"]').parent()
   });
+
+  if(window.scrollY >= $(el).offset().top) {
+    navCurr = i;
+  }
 });
 
 
 navTargets[navCurr].li.addClass('active');
 console.log(navTargets[1]);
 
-// Represent active nav link based on current window position
+// Denote active nav link based on current window position
 $(window).scroll(function() {
   var navActive = navTargets[navCurr]
   var navNext = '';
