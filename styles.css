@@ -1,1 +1,17 @@
-
+.cover {
+  height: 500px;
+  width: auto;
+  text-align: center;
+}
+.jumbotron {
+  margin-left: 20;
+  margin-bottom: 0;
+}
+.nav {
+  position: fixed;
+  text-align: center;
+  margin: 10px;
+}
+.nav > li > a:focus {
+  background-color: inherit;
+}

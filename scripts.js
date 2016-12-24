@@ -45,7 +45,7 @@ $(window).scroll(function() {
       return;
 
     navNext = navTargets[navCurr - 1];
-    if(window.scrollY <= navActive.top) {
+    if(window.scrollY < navActive.top) {
       navActive.li.removeClass('active');
       navNext.li.addClass('active');
       navCurr--;
