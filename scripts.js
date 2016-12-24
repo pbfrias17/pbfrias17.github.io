@@ -1,7 +1,9 @@
+//$('body').addClass('hidden');
+$('.cover').css({ height: $(window).height() });
+
 var navTargets = [];
 var navCurr = 0;
 var prevScrollY = window.scrollY;
-console.log(prevScrollY);
 
 // keep track of all navigation targets and initialize
 $.each($('.navTarget'), function(i, el) {
@@ -21,7 +23,6 @@ $.each($('.navTarget'), function(i, el) {
 
 
 navTargets[navCurr].li.addClass('active');
-console.log(navTargets[1]);
 
 // Denote active nav link based on current window position
 $(window).scroll(function() {
@@ -66,4 +67,8 @@ $(function() {
 
     return false;
   });
+});
+
+$(window).load(function() {
+  $('body').removeClass('hidden');
 });
