@@ -1,5 +1,4 @@
 //$('body').addClass('hidden');
-$('.cover').css({ height: $(window).height() });
 
 var navTargets = [];
 var navCurr = 0;
@@ -68,7 +67,8 @@ $(function() {
     return false;
   });
 });
-
-$(window).load(function() {
+/*
+$(window).on('load', function() {
   $('body').removeClass('hidden');
 });
+*/
