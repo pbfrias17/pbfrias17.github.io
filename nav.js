@@ -2,17 +2,18 @@
 
 var navTargets = [];
 var navCurr = 0;
+var targetPadding = 140;
 var prevScrollY = window.scrollY;
-
 
 // keep track of all navigation targets and initialize
 $.each($('.navTarget'), function(i, el) {
   // #top is a special-case
   var href = (i != 0) ? $(el).attr('id') : '';
+  var top = ($(el).offset().top != 0) ? $(el).offset().top - targetPadding : 0;
 
   navTargets.push({
     obj: $(el),
-    top: $(el).offset().top,
+    top: top,
     li: $('a[href="#'+href+'"]').parent()
   });
 

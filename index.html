@@ -11,8 +11,9 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 <body>
+  <div id='background-img'></div>
   <div id='nav-container'>
-    <ul class='nav nav-pills nav-stacked'>
+    <ul class='nav nav-pills collapse navbar-collapse nav-stacked'>
       <li role='presentation'><a href='#'><span class='glyphicon glyphicon-chevron-up' /></a></li>
       <li role='presentation'><a href='#about-me'>About Me</a></li>
       <li role='presentation'><a href='#experience'>Experience</a></li>
@@ -21,17 +22,17 @@
       <li role='presentation'><a href='#contact'>Contact Info</a></li>
     </ul>
   </div>
-  <section class='container-fluid page navTarget'>
-    <h1>Paolo B. Frias</h1>
-  </section>
   <div class='container'>
+    <section class='container-fluid page navTarget'>
+      <div class='title'>Paolo Bautista Frias</div>
+    </section>
     <section id='about-me' class='page navTarget'>
-      <h2>About Me</h2>
+      <div class='title'>ABOUT ME</div>
       <p>A passionate developer who has experience working in various technologies</p>
       <p>with the aim of creating robust and modern applications</p>
     </section>
     <section id='experience' class='page navTarget'>
-      <h2>EXPERIENCE</h2>
+      <div class='title'>EXPERIENCE</div>
       <div id='exp-accordian' class='panel-group'>
         <div class="panel-heading" role="tab" id="headingOne">
           <h4 class="panel-title">
@@ -88,13 +89,13 @@
     </section>
 
     <section id='education' class='page navTarget'>
-    <h2>EDUCATION</h2>
+    <div class='title'>EDUCATION</div>
     <h3>University of Maryland, Baltimore County (UMBC)</h3><h5>Graduated May 2016</h5>
     <ul>
       <li>B.S. in Computer Science</li>
     	<li>GPA 3.0 / 3.7 (Major)</li>
     </ul>
-    <h3>Independant Coursework</h3>
+    <h3>Independent Coursework</h3>
     <ul>
       <li>The Web Developer Bootcamp (Udemy)</li>
       <li>Complete React Native ane Redux Course (Udemy)</li>
@@ -102,24 +103,25 @@
     </ul>
     </section>
     <section id='skills' class='page navTarget'>
-      <h2>SKILLS</h2>
+      <div class='title'>SKILLS &amp; ABILITIES</div>
     	Operating Systems: Windows, Linux
     	Programming Languages: C, C#, Javascript, JQuery, HTML, CSS (with Sass), PHP
     	Libraries: React.js, Node.js, React Native, Redux, Chai
     	Tools: Unity Game Engine, Android Studio, Perforce, Git
     	Unofficial Certificates: Complete React Native and Redux Course (Udemy)
     </section>
-  </div>
-  <section id='contact' class='page navTarget'>
-    <h2>CONTACT ME</h2>
-    <section class='general info'>
-      <h4>2701 Wheaton Court  |  Churchville, Maryland 21028  |  paolo.b.frias@gmail.com  |  443-910-6145</h4>
+    <section id='contact' class='page navTarget'>
+      <div class='title'>CONTACT INFO</div>
+      <section class='general info'>
+        <h4>2701 Wheaton Court  |  Churchville, Maryland 21028  |  paolo.b.frias@gmail.com  |  443-910-6145</h4>
+      </section>
+      <form>
+        <label for='nameInput'>Name</label>
+        <input type='text' name='nameInput' />
+      </form>
     </section>
-    <form>
-      <label for='nameInput'>Name</label>
-      <input type='text' name='nameInput' />
-    </form>
-  </section>
+  </div>
+  <script src='./scroll.js'></script>
   <script src='./nav.js'></script>
   <script src='./exp.js'></script>
 </body>
