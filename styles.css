@@ -1,4 +1,4 @@
-.cover {
+.page {
   display: flex;
   flex-direction: column;
   height: 950px;
@@ -6,17 +6,23 @@
   text-align: center;
   justify-content: center;
 }
-.jumbotron {
-  margin-left: 20;
-  margin-bottom: 0;
+.container {
+  max-width: 75%;
 }
 .nav {
   position: fixed;
   text-align: center;
   margin: 10px;
 }
+.collapse {
+  padding-left: 0px;
+}
 .nav > li > a:focus {
   background-color: inherit;
+}
+.nav li {
+  max-width: 100%;
+  overflow: hidden;
 }
 .hidden {
   visibility: 'hidden';

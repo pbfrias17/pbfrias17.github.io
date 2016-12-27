@@ -7,8 +7,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href='./styles.css'>
   <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 <body>
   <div id='nav-container'>
@@ -21,44 +21,73 @@
       <li role='presentation'><a href='#contact'>Contact Info</a></li>
     </ul>
   </div>
-  <section class='container-fluid cover navTarget'>
+  <section class='container-fluid page navTarget'>
     <h1>Paolo B. Frias</h1>
   </section>
   <div class='container'>
-    <section id='about-me' class='navTarget'>
+    <section id='about-me' class='page navTarget'>
       <h2>About Me</h2>
       <p>A passionate developer who has experience working in various technologies</p>
       <p>with the aim of creating robust and modern applications</p>
     </section>
-    <section id='experience' class='navTarget'>
+    <section id='experience' class='page navTarget'>
       <h2>EXPERIENCE</h2>
-      <div class='row'>
-        <div class='col-xs-8'><h3>BreakAway Games <small>Hunt Valley, Maryland</small></h3></div>
-        <div class='col-xs-4'>July 2016 – October 2016</div>
+      <div id='exp-accordian' class='panel-group'>
+        <div class="panel-heading" role="tab" id="headingOne">
+          <h4 class="panel-title">
+            <a role="button" data-toggle="collapse" data-parent="#exp-accordion" href="#collapseOne">BreakAway Games</a>
+          </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse" role="tabpanel">
+          <div class="panel-body">
+            <h5>Hunt Valley, Maryland</h5>
+            <h5>July 2016 – October 2016</h5>
+            <h4>Programmer Intern</h4>
+            <ul>
+            	<li>Quickly grasped pre-established architecture and proprietary tools</li>
+            	<li>Hands-on experience with development lifecycle of mobile game that evolved through feedback of clients, producers, and designers</li>
+            	<li>Utilized Unity's User Interface system to create a professional and enjoyable user experience</li>
+            	<li>Received praise for my ability to learn quickly and work with my own initiative</li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel-heading" role="tab" id="headingOne">
+          <h4 class="panel-title">
+            <a role="button" data-toggle="collapse" data-parent="#exp-accordion" href="#collapseTwo">ProObject</a>
+          </h4>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel">
+          <div class="panel-body">
+            <h5>Hanover, Maryland	January 2016 – May 2016</h5>
+            <h4>Android Developer Intern</h4>
+            <ul>
+              <li>Independently researched and implemented the proper technologies necessary to reach the objectives assigned to me</li>
+              <li>Documented the use of the technologies for future references needed by the company</li>
+              <li>Delivered end-of-tour presentation and document that recapped the challenges I encountered and the strategies I used to overcome them</li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel-heading" role="tab" id="headingOne">
+          <h4 class="panel-title">
+            <a role="button" data-toggle="collapse" data-parent="#exp-accordion" href="#collapseThree">MDWestServe, Inc.</a>
+          </h4>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel">
+          <div class="panel-body">
+            <h5>Towson, Maryland</h5>
+            <h5>January 2014 – January 2016</h5>
+            <h4>PHP Developer Intern</h4>
+            <ul>
+          	  <li>Aided in the development and maintenance of web application that was heavily utilized by employees and clients</li>
+          	  <li>Obtained hands-on experience with learning new web technologies, programming languages, and bug-tracking tools</li>
+          	  <li>Refactored legacy PHP code into the CodeIgniter MVC framework</li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <h4>Programmer Intern</h4>
-      <ul>
-      	<li>Quickly grasped pre-established architecture and proprietary tools</li>
-      	<li>Hands-on experience with development lifecycle of mobile game that evolved through feedback of clients, producers, and designers</li>
-      	<li>Utilized Unity's User Interface system to create a professional and enjoyable user experience</li>
-      	<li>Received praise for my ability to learn quickly and work with my own initiative</li>
-      </ul>
-      <h3>ProObject<h3><h5>| Hanover, Maryland	January 2016 – May 2016</h5>
-      <h4>Android Developer Intern</h4>
-      <ul>
-        <li>Independently researched and implemented the proper technologies necessary to reach the objectives assigned to me</li>
-      	<li>Documented the use of the technologies for future references needed by the company</li>
-      	<li>Delivered end-of-tour presentation and document that recapped the challenges I encountered and the strategies I used to overcome them</li>
-      </ul>
-      <h3>MDWestServe, Inc.</h3><h5> |  Towson, Maryland	January 2014 – January 2016</h5>
-      <h4>PHP Developer Intern</h4>
-      <ul>
-    	  <li>Aided in the development and maintenance of web application that was heavily utilized by employees and clients</li>
-    	  <li>Obtained hands-on experience with learning new web technologies, programming languages, and bug-tracking tools</li>
-    	  <li>Refactored legacy PHP code into the CodeIgniter MVC framework</li>
-      </ul>
     </section>
-    <section id='education' class='navTarget'>
+
+    <section id='education' class='page navTarget'>
     <h2>EDUCATION</h2>
     <h3>University of Maryland, Baltimore County (UMBC)</h3><h5>Graduated May 2016</h5>
     <ul>
@@ -72,7 +101,7 @@
       <li>Advanced React and Redux (Udemy)</li>
     </ul>
     </section>
-    <section id='skills' class='navTarget'>
+    <section id='skills' class='page navTarget'>
       <h2>SKILLS</h2>
     	Operating Systems: Windows, Linux
     	Programming Languages: C, C#, Javascript, JQuery, HTML, CSS (with Sass), PHP
@@ -81,7 +110,7 @@
     	Unofficial Certificates: Complete React Native and Redux Course (Udemy)
     </section>
   </div>
-  <section id='contact' class='navTarget'>
+  <section id='contact' class='page navTarget'>
     <h2>CONTACT ME</h2>
     <section class='general info'>
       <h4>2701 Wheaton Court  |  Churchville, Maryland 21028  |  paolo.b.frias@gmail.com  |  443-910-6145</h4>
@@ -91,6 +120,7 @@
       <input type='text' name='nameInput' />
     </form>
   </section>
-  <script src='./scripts.js'></script>
+  <script src='./nav.js'></script>
+  <script src='./exp.js'></script>
 </body>
 </html>
