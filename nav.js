@@ -39,6 +39,9 @@ $(window).scroll(function() {
     if(window.scrollY >= navNext.top) {
       navActive.li.removeClass('active');
       navNext.li.addClass('active');
+      navNext.obj.find('.title')
+        .css('margin-top', '0px')
+        .css('opacity', '1');
       navCurr++;
     }
   } else {

@@ -3,7 +3,7 @@
   width: 100%;
   height: 120%;
   z-index: -1;
-  filter: opacity(.8);
+  filter: saturate(125%);
   background: url("https://static.pexels.com/photos/6548/cold-snow-winter-mountain.jpeg") top/cover;
 }
 .page {
@@ -15,6 +15,11 @@
 }
 .title {
   font-size: 50px;
+  margin-top: 300px;
+  opacity: 0;
+  transition:
+    margin-top 1s ease-in-out,
+    opacity 1s ease-in-out;
 }
 .nav {
   position: fixed;
@@ -29,7 +34,8 @@
   color: #efefef;
 }
 .container .page:nth-child(even) {
-  background-color: rgba(80, 80, 80, .7);
+  /*background-color: rgba(20, 20, 20, .7);*/
+  background: linear-gradient(0deg, rgba(189, 206, 223, .3), rgba(33, 51, 75, .5));
   color: #ececec;
   width: 97%;
   margin: 0 auto 0 auto;

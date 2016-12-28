@@ -4,7 +4,7 @@ $(window).scroll(function() {
   if(filterVal > 10)
     filterVal = 10;
 
-  var filterStr = 'blur(' + filterVal +'px) opacity(.8)';
+  var filterStr = 'blur(' + filterVal +'px) saturate(125%)';
 
   $('#background-img')
     .css('filter',filterStr)
