@@ -24,6 +24,9 @@ $.each($('.navTarget'), function(i, el) {
 
 
 navTargets[navCurr].li.addClass('active');
+navTargets[navCurr].obj.find('.title')
+  .css('margin-top', '0px')
+  .css('opacity', '1');
 
 // Denote active nav link based on current window position
 $(window).scroll(function() {

@@ -12,6 +12,7 @@
   height: 950px;
   text-align: center;
   justify-content: center;
+  padding: 30px 100px 100px 100px;
 }
 .title {
   font-size: 50px;
@@ -20,6 +21,17 @@
   transition:
     margin-top 1s ease-in-out,
     opacity 1s ease-in-out;
+}
+h4 {
+  font-style: italic;
+  font-size: 24px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+h5, .page li {
+  font-size: 18px;
+  list-style: none;
+  margin-top: 0px;
 }
 .nav {
   position: fixed;
@@ -52,6 +64,16 @@
 .nav li {
   max-width: 100%;
   overflow: hidden;
+}
+.panel-title a:focus,
+.panel-title a:active {
+  text-decoration: none;
+}
+.panel-title a:hover {
+  text-decoration: underline;
+}
+.panel-body h4 {
+  margin-top: 10px;
 }
 .hidden {
   visibility: 'hidden';
