@@ -6,9 +6,12 @@ var target_margin = '5px';
 $('a[data-parent="#exp-accordion"]').click(function() {
   var target = $(this.hash);
   target.collapse('toggle');
-  
-  // this needs to toggle as well...
-  $(this).find('h4').css({'margin-top': '0px', 'margin-bottom': '0px'});
+});
+
+// adjust margin/padding when toggling collapsables
+$('.panel-collapse.collapse').on('show.bs.collapse', function() {
+  var href = $(this).attr('id');
+  console.log($('a[href="#' + href + '"]').closest('.panel-heading'));
 });
 
 // keep track of all navigation targets and initialize

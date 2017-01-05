@@ -12,7 +12,7 @@
   height: 950px;
   text-align: center;
   justify-content: center;
-  padding: 30px 100px 100px 100px;
+  padding: 65px 100px 100px 65px;
 }
 .title {
   font-size: 50px;
@@ -22,19 +22,19 @@
     margin-top 1s ease-in-out,
     opacity 1s ease-in-out;
 }
+h3 {
+  font-size: 28px;
+}
 h4 {
   font-style: italic;
   font-size: 24px;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  transition:
-    margin-top .5s,
-    margin-bottom .5s;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 h5, .page li {
   font-size: 18px;
   list-style: none;
-  margin-top: 0px;
+  margin: 0px;
 }
 strong {
   font-size: 20px;
@@ -42,6 +42,10 @@ strong {
 }
 .row h5 {
   font-size: 15px;
+}
+div[class^="col-"] {
+  padding: 0px;
+  margin-bottom: 15px;
 }
 .nav {
   position: fixed;
@@ -75,6 +79,16 @@ strong {
   max-width: 100%;
   overflow: hidden;
 }
+.panel-heading {
+  padding: 0px;
+}
+.panel-body {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+.panel-title a {
+
+}
 .panel-title a:focus,
 .panel-title a:active {
   text-decoration: none;
@@ -87,6 +101,19 @@ strong {
 }
 .panel-body {
   margin-bottom: 0px;
+}
+.work-details li:nth-child(odd) {
+  background-color: rgba(189, 206, 223, .3);
+  color: rgba(33, 51, 75, 1);
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 16px;
+}
+.work-details li:nth-child(even) {
+  padding: 5px;
+  background-color: rgba(33, 51, 75, .5);
+  border-radius: 5px;
+  font-size: 16px;
 }
 .hidden {
   visibility: 'hidden';
