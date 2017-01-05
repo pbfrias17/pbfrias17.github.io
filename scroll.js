@@ -13,5 +13,6 @@ $(window).scroll(function() {
     .css('oFilter',filterStr)
     .css('msFilter',filterStr);
 
+  // simple parallax scrolling
   $('#background-img').css('top',-window.scrollY * .03);
 });
