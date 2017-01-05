@@ -1,4 +1,4 @@
-//BLUR
+// BLUR
 $(window).scroll(function() {
   var filterVal = window.scrollY / 95;
   if(filterVal > 10)
@@ -16,3 +16,5 @@ $(window).scroll(function() {
   // simple parallax scrolling
   $('#background-img').css('top',-window.scrollY * .03);
 });
+
+// entrance animations for each page
